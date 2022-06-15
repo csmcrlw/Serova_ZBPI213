@@ -37,7 +37,7 @@ def bin_search(ls, item):
         mid = low + high
         guess = ls[mid]
         if guess == item:
-            return f'Индекс искомого элемента: {mid}'
+            return mid
         elif guess > item:
             high = mid - 1
         else:
