@@ -48,20 +48,22 @@ def bin_search(ls, item):
 # Задание 5
 
 def is_palindrome(string):
-    
-    marks = ''' —!()-[]{};?@#$%:'"\,./^&;*_'''
-    for x in marks:
-        string = string.replace(x, '')
-    string = string.lower()
-    left_pos = 0
-    right_pos = len(string) - 1
-    
-    while right_pos >= left_pos:
-        if not string[left_pos] == string[right_pos]:
-            return 'NO'
-        left_pos += 1
-        right_pos -= 1
-    return 'YES'
+    s = string.lower()
+    a = 0
+    b = len(string) - 1
+    flag = "YES"
+    while a < b:
+        while not s[a].isalpha():
+            a += 1
+        while not s[b].isalpha():
+            b -= 1
+        if s[a] != s[b]:
+            flag = "NO"
+            break
+        else:
+            a += 1
+            b -= 1
+    return flag
 
 
 # Задание 6
