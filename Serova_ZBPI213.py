@@ -49,7 +49,7 @@ def bin_search(ls, item):
 
 def is_palindrome(string):
     
-    marks = ''' !()-[]{};?@#$%:'"\,./^&;*_'''
+    marks = ''' —!()-[]{};?@#$%:'"\,./^&;*_'''
     for x in marks:
         string = string.replace(x, '')
     string = string.lower()
